@@ -1,0 +1,135 @@
+/* General Styles */
+body {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+:root {
+  --bg-color: #f4f4f9;
+  --text-color: #333;
+  --card-bg: #fff;
+  --button-bg: #4caf50;
+  --button-hover: #45a049;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="dark"] {
+  --bg-color: #1e1e2f;
+  --text-color: #f4f4f9;
+  --card-bg: #2c2c3a;
+  --button-bg: #5dbb63;
+  --button-hover: #4ea754;
+  --shadow-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: var(--button-bg);
+  color: white;
+  box-shadow: 0 4px 6px var(--shadow-color);
+}
+
+header h1 {
+  margin: 0;
+}
+
+#theme-toggle {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: white;
+  transition: transform 0.2s;
+}
+
+#theme-toggle:hover {
+  transform: rotate(20deg);
+}
+
+/* Main Section */
+main {
+  padding: 20px;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Add Habit Section */
+.add-habit {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+#habit-input {
+  flex: 1;
+  padding: 10px;
+  font-size: 16px;
+  margin-right: 10px;
+  border: 1px solid var(--shadow-color);
+  border-radius: 6px;
+}
+
+#add-habit-button {
+  padding: 10px 20px;
+  background-color: var(--button-bg);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+#add-habit-button:hover {
+  background-color: var(--button-hover);
+  transform: translateY(-2px);
+}
+
+/* Habit List */
+.habit-container {
+  list-style-type: none;
+  padding: 0;
+}
+
+.habit-item {
+  background-color: var(--card-bg);
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 15px;
+  box-shadow: 0 4px 6px var(--shadow-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.habit-text {
+  font-size: 18px;
+}
+
+.complete-button {
+  padding: 8px 15px;
+  background-color: var(--button-bg);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.complete-button:hover {
+  background-color: var(--button-hover);
+  transform: translateY(-2px);
+}
+
+/* Stats */
+.stats {
+  margin-top: 30px;
+  font-size: 20px;
+}
